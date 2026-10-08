@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chá da Joana</title>
+    <meta name="description" content="Convite digital do Chá de Bebê da Joana" />
+    <style>
+      :root {
+        --rose-1: #fff5f7;
+        --rose-2: #f9d9e3;
+        --rose-3: #ecb7c7;
+        --rose-4: #d98aa4;
+        --pink-strong: #b86182;
+        --text: #4d3a45;
+        --muted: #6b5a62;
+        --gold: #d7b66a;
+        --white: #ffffff;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #fffafc 0%, #fff1f5 100%);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 36px 20px 60px;
+      }
+
+      .card {
+        background: rgba(255,255,255,0.85);
+        border: 1px solid rgba(184, 97, 130, 0.12);
+        border-radius: 26px;
+        box-shadow: 0 10px 30px rgba(184, 97, 130, 0.12);
+        padding: 28px 22px 24px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 22px;
+      }
+
+      .tag {
+        display: inline-block;
+        background: var(--rose-2);
+        color: var(--pink-strong);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 18px 0 8px;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 1.05;
+        color: var(--pink-strong);
+        letter-spacing: 0.04em;
+      }
+
+      .subtitle {
+        margin: 0;
+        font-size: 1.1rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .divider {
+        width: 140px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--rose-3), var(--gold));
+        margin: 26px auto;
+        border-radius: 999px;
+      }
+
+      .details {
+        text-align: center;
+        margin: 18px 0 22px;
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .details strong {
+        font-size: 1.1rem;
+      }
+
+      .location {
+        margin-top: 10px;
+      }
+
+      .rsvp {
+        margin-top: 28px;
+        text-align: center;
+      }
+
+      .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 22px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.98rem;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        opacity: 0.96;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--pink-strong), #d66a93);
+        color: var(--white);
+      }
+
+      .btn-secondary {
+        background: var(--white);
+        color: var(--pink-strong);
+        border: 1px solid rgba(184, 97, 130, 0.25);
+      }
+
+      form {
+        margin-top: 28px;
+        background: #fff8fa;
+        border: 1px solid rgba(184, 97, 130, 0.12);
+        border-radius: 20px;
+        padding: 18px 16px 14px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 16px;
+        text-align: left;
+      }
+
+      label {
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid rgba(184, 97, 130, 0.25);
+        border-radius: 12px;
+        padding: 12px 14px;
+        font-size: 1rem;
+        outline: none;
+      }
+
+      input[type="text"]:focus {
+        border-color: var(--pink-strong);
+        box-shadow: 0 0 0 3px rgba(184, 97, 130, 0.12);
+      }
+
+      .radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 8px 0 10px;
+      }
+
+      .radio-option {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text);
+      }
+
+      .radio-option input {
+        accent-color: var(--pink-strong);
+      }
+
+      .small {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .whatsapp-box {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .wa-btn {
+        display: inline-block;
+        background: #25d366;
+        color: white;
+        text-decoration: none;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+
+      @media (max-width: 560px) {
+        .card { padding: 18px 14px; }
+        .btn { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <div class="tag">Chá de bebê</div>
+          <h1>Joana</h1>
+          <p class="subtitle">está chegando!</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="details">
+          <p><strong>Com muito amor e alegria, queremos convidar você para o nosso chá de bebê</strong><br />e celebrar conosco essa chegada tão especial!</p>
+          <p><strong>Evelyn e Cristiano</strong></p>
+          <p><strong>DOMINGO</strong> 13 de dezembro<br />às 14h</p>
+          <p class="location"><strong>SALÃO DE FESTAS VENEZA I</strong><br />Rua Afonso Mello, nº 200<br />Rio Várzea — Itaboraí</p>
+        </div>
+
+        <div class="rsvp">
+          <a class="btn btn-primary" href="#rsvp">Confirmar presença</a>
+        </div>
+
+        <div id="rsvp" style="margin-top: 28px;">
+          <form>
+            <div class="field">
+              <label for="nome">Seu nome</label>
+              <input id="nome" type="text" placeholder="Digite seu nome" />
+            </div>
+
+            <div class="field">
+              <label>Você vai?</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="confirmacao" checked /> Sim, estarei lá 🌼</label>
+                <label class="radio-option"><input type="radio" name="confirmacao" /> Não poderei ir</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="pessoas">Quantas pessoas (contando com você)?</label>
+              <input id="pessoas" type="text" placeholder="Ex: 2" />
+            </div>
+
+            <div class="whatsapp-box">
+              <a class="wa-btn" href="https://wa.me/5521999999999?text=Oi%2C%20quero%20confirmar%20minha%20presen%C3%A7a%20no%20ch%C3%A1%20da%20Joana!" target="_blank" rel="noopener noreferrer">Confirmar pelo WhatsApp (1)</a>
+              <a class="wa-btn" href="https://wa.me/5521888888888?text=Oi%2C%20quero%20confirmar%20minha%20presen%C3%A7a%20no%20ch%C3%A1%20da%20Joana!" target="_blank" rel="noopener noreferrer">Confirmar pelo WhatsApp (2)</a>
+            </div>
+
+            <p class="small" style="margin-top: 14px; text-align: center;">
+              Toque em um dos botões; a mensagem já vai pronta.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
